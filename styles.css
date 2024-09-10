@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+
+html, body{
+    width: 100%;
+    height: 100%;  
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+input[type="text"], textarea {
+    width: 280px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+button{
+    padding: 6px;
+    width: 200px;
+    font-size: 1rem;
+    margin: 2rem;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    border-radius: 5px;
+    cursor: pointer;
+}
