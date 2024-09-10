@@ -4,10 +4,12 @@ const logoChecked = document.getElementById('logo-check')
 generatePdfBtn.addEventListener('click', async function() {
     const doc = new jsPDF();
 
-    const title = "CHRIST METHODIST CHURCH";
-    const lyricstxt = await fetch("./lyrics.txt");
-    const lyrics = await lyricstxt.text();
-
+    // const title = "CHRIST METHODIST CHURCH";
+    // const lyricstxt = await fetch("./lyrics.txt");
+    // const lyrics = await lyricstxt.text();
+    const title = document.getElementById('titleInput').value;
+    const lyrics = document.getElementById('lyricsInput').value;
+    
     // Set title
     doc.setFontSize(22);
     doc.text(title, 105, 20, null, null, 'center');
