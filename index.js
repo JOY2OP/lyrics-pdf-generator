@@ -66,7 +66,7 @@ generatePdfBtn.addEventListener('click', async function() {
 
     // Open PDF in a new tab
     const pdfOutput = doc.output('bloburl');
-    window.open(pdfOutput, '_blank'); //'_blank' opens the url in new tab
+    //window.open(pdfOutput, '_blank'); //'_blank' opens the url in new tab
 
     let saveFileDate = new Date().toLocaleString().replace(/ /g, '')
     doc.save(`lyrics-${saveFileDate}.pdf`)
