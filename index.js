@@ -74,8 +74,11 @@ generatePdfBtn.addEventListener('click', async function() {
         }
     });
 
-    const pdfOutput = doc.output('bloburl');
-    window.open(pdfOutput, '_blank');
+    // const pdfOutput = doc.output('bloburl');
+    // window.open(pdfOutput, '_blank'); //'_blank' opens the url in new tab
+
+    let saveFileDate = new Date().toLocaleString().replace(/ /g, '')
+    doc.save(`lyrics-${saveFileDate}.pdf`)
 });
 
 let base64str = '';
