@@ -2,6 +2,7 @@
 
 const generatePdfBtn = document.getElementById('submit');
 const logoChecked = document.getElementById('logo-check');
+const fontSize= document.getElementById('fontSize');
 
 generatePdfBtn.addEventListener('click', async function() {
     const doc = new jsPDF();
@@ -29,7 +30,9 @@ generatePdfBtn.addEventListener('click', async function() {
     doc.text(title, 105, 20, null, null, 'center');
 
     // Set up lyrics
-    doc.setFontSize(12);
+    let setSizeOfFont = fontSize.value ? Number(fontSize.value) : 12;
+
+    doc.setFontSize(setSizeOfFont);
     const pageHeight = doc.internal.pageSize.height;
     const pageWidth = doc.internal.pageSize.width;
     const margin = 10;
